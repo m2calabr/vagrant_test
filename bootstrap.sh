@@ -3,4 +3,5 @@
 apt-get update
 apt-get install -y apache2
 rm -rf /var/www
-ln -fs /vagrant /var/www
+mkdir /vagrant/www
+ln -fs /vagrant/www /var/www
