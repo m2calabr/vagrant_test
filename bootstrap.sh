@@ -31,14 +31,14 @@ apt-get install -y php5 libapache2-mod-php5
 apt-get install -y python-software-properties
 
 apt-get install -y php5-cli
-sudo apt-get install -y php5-mysql
+apt-get install -y php5-mysql
 
 # Install PHP 5.x
 # Use "ppa:ondrej/php5-oldstable" for old and stable release
 # add-apt-repository ppa:ondrej/php5
 # Update repositories
 apt-get update -y
-apt-get upgrade -y
+#apt-get upgrade -y
 #apt-get install php5
 
 
