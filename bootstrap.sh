@@ -37,6 +37,7 @@ apt-get install -y php5-curl php5-mcrypt php5-gd php-pear php5-xdebug php5-intl
 
 # php.ini
 # Setting the timezone
+PHP_TIMEZONE="Europe/Helsinki"
 sed 's#;date.timezone\([[:space:]]*\)=\([[:space:]]*\)*#date.timezone\1=\2\"'"$PHP_TIMEZONE"'\"#g' /etc/php5/apache2/php.ini > /etc/php5/apache2/php.ini.tmp
 mv /etc/php5/apache2/php.ini.tmp /etc/php5/apache2/php.ini
 sed 's#;date.timezone\([[:space:]]*\)=\([[:space:]]*\)*#date.timezone\1=\2\"'"$PHP_TIMEZONE"'\"#g' /etc/php5/cli/php.ini > /etc/php5/cli/php.ini.tmp
