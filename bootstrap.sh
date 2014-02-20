@@ -32,8 +32,13 @@ apt-get install -y python-software-properties
 apt-get install -y php5-cli
 apt-get install -y php5-mysql
 
-# Other tools
+# Tools
 apt-get install -y php5-curl php5-mcrypt php5-gd php-pear php5-xdebug php5-intl
+
+# MongoDB driver, has to after pear install
+sudo apt-get install -y build-essential
+sudo pecl install mongo
+sed -i '$ a\extension=mongo.so' /etc/php5/cli/php.ini
 
 # php.ini
 # Setting the timezone
