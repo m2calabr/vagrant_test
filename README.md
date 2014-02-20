@@ -4,7 +4,10 @@ Testing Vagrant setup
 
 Todo
 ----
-* PHP timezone
+
+* Puppet / Chef / Salt ?
+* Sync database(s) ?
+
 * PHP Mongodb driver
 
 * Mongodb
@@ -12,6 +15,7 @@ Todo
 * Ruby
 * Compass / SASS
 * Node.js & npm
+** https://github.com/semmypurewal/node-dev-bootstrap
 
 
 Sources
