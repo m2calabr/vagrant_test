@@ -2,6 +2,18 @@
 Testing Vagrant setup
 =====================
 
+Todo
+----
+* PHP timezone
+* PHP Mongodb driver
+
+* Mongodb
+* MySQL
+* Ruby
+* Compass / SASS
+* Node.js & npm
+
+
 Sources
 -------
 
