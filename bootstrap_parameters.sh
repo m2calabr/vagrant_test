@@ -9,4 +9,4 @@ DATABASE_ROOT_HOST="localhost"
 
 # PHP
 # ---
-PHP_TIMEZONE="UTC"
+PHP_TIMEZONE="Europe/Helsinki"
