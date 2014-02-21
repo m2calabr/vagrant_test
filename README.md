@@ -2,22 +2,26 @@
 Testing Vagrant setup
 =====================
 
+Done
+----
+* Apache2
+* PHP5.x, Pear, xdebug, mcrypt, some other tools
+* MongoDB & PHP driver
+
+
+
 Todo
 ----
 
-* https://puphpet.com/ ?
-* Puppet / Chef / Salt ?
 * Sync database(s) ?
 
-* PHP Mongodb driver
-
-* Mongodb
 * MySQL
 * Ruby
 * Compass / SASS
 * Node.js & npm
 ** https://github.com/semmypurewal/node-dev-bootstrap
 
+* 64-bit Ubuntu & Mongo
 
 Sources
 -------

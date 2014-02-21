@@ -60,9 +60,10 @@ mv /etc/php5/apache2/php.ini.tmp /etc/php5/apache2/php.ini
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
 echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
 sudo apt-get update
+sudo apt-get install mongodb-10gen
 sudo service mongodb start # Is this needed?
 
-# MongoDB driver, has to be after pear install
+# MongoDB driver, has to be after PHP Pear install
 sudo apt-get install -y build-essential
 sudo pecl install mongo
 sudo sed -i '$ a\extension=mongo.so' /etc/php5/apache2/php.ini
