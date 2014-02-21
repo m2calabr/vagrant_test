@@ -5,6 +5,7 @@ Testing Vagrant setup
 Todo
 ----
 
+* https://puphpet.com/ ?
 * Puppet / Chef / Salt ?
 * Sync database(s) ?
 
