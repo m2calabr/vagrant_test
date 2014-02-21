@@ -12,6 +12,7 @@ source /vagrant/bootstrap_parameters.sh
 # ------------------------------------------------
 apt-get update
 
+
 # APACHE
 # ------------------------------------------------
 apt-get install -y apache2
@@ -19,7 +20,6 @@ apt-get install -y apache2
 echo "ServerName localhost" > /etc/apache2/httpd.conf
 # Enable "mod_rewrite"
 a2enmod rewrite
-
 
 
 # PHP 5.x
@@ -36,8 +36,6 @@ apt-get install -y php5-mysql
 # Tools
 apt-get install -y php5-curl php5-mcrypt php5-gd php-pear php5-xdebug php5-intl php5-dev
 
-
-
 # php.ini
 # Setting the timezone
 PHP_TIMEZONE="Europe/Helsinki"
@@ -53,6 +51,12 @@ mv /etc/php5/apache2/php.ini.tmp /etc/php5/apache2/php.ini
 sed 's#error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT#error_reporting = E_ALL#g' /etc/php5/apache2/php.ini > /etc/php5/apache2/php.ini.tmp
 mv /etc/php5/apache2/php.ini.tmp /etc/php5/apache2/php.ini
 
+
+# Essential packages
+# ------------------
+apt-get install -y build-essential git curl
+
+
 # MONGO
 # ------------------------------------------------
 # http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/
@@ -64,9 +68,27 @@ sudo apt-get install mongodb-10gen
 sudo service mongodb start # Is this needed?
 
 # MongoDB driver, has to be after PHP Pear install
-sudo apt-get install -y build-essential
 sudo pecl install mongo
 sudo sed -i '$ a\extension=mongo.so' /etc/php5/apache2/php.ini
+
+
+# Ruby & Rubygems
+# ------------------------------------------------
+# http://ndever.net/articles/linux/installing-sass-and-compass-ubuntu-1210-1304
+sudo apt-get install -y ruby-full rubygems
+
+
+# SASS & Compass
+# ------------------------------------------------
+# http://ndever.net/articles/linux/installing-sass-and-compass-ubuntu-1210-1304
+sudo gem install sass
+sudo gem install compass
+
+# MySQL
+# ------------------------------------------------
+export DEBIAN_FRONTEND=noninteractive
+apt-get install -y mysql-server
+apt-get install -y mysql-client
 
 
 # Directories
