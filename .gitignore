@@ -1,5 +1,6 @@
 
 .vagrant*
+www/wp*
 .OLD-temp*
 
 # OS generated files #
