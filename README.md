@@ -2,6 +2,19 @@
 Testing Vagrant setup
 =====================
 
+
+Usage
+-----
+* Install Virtualbox
+* Install Vagrant
+* Clone this repository
+* Open command line on it's directory, command
+  * `vagrant up --provision`
+
+After startup, the www-directory is available at `http://127.0.0.1:4567/`
+
+Note that `ssh vagrant` will take you to `/home/vagrant`, whereas the shared directory is at `/vagrant`.
+
 Done
 ----
 * Apache2

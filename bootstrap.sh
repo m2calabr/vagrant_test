@@ -65,7 +65,6 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
 echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
 sudo apt-get update
 sudo apt-get install mongodb-10gen
-sudo service mongodb start # Is this needed?
 
 # MongoDB driver, has to be after PHP Pear install
 sudo pecl install mongo
@@ -77,12 +76,14 @@ sudo sed -i '$ a\extension=mongo.so' /etc/php5/apache2/php.ini
 # http://ndever.net/articles/linux/installing-sass-and-compass-ubuntu-1210-1304
 sudo apt-get install -y ruby-full rubygems
 
+
 # Node.js & Node Package Manager
 # ------------------------------------------------
 # http://stackoverflow.com/questions/16302436/install-nodejs-on-ubuntu-12-10
 sudo add-apt-repository -y ppa:chris-lea/node.js
 sudo apt-get update
 sudo apt-get install -y nodejs
+
 
 # SASS & Compass & Foundation SASS
 # ------------------------------------------------
@@ -92,6 +93,7 @@ sudo gem install compass
 
 sudo npm install -g bower grunt-cli
 sudo gem install foundation
+
 
 # MySQL
 # ------------------------------------------------
