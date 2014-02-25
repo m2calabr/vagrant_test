@@ -54,7 +54,7 @@ mv /etc/php5/apache2/php.ini.tmp /etc/php5/apache2/php.ini
 
 # Essential packages
 # ------------------
-apt-get install -y build-essential git curl
+apt-get install -y build-essential git curl g++ libssl-dev apache2-utils
 
 
 # MONGO
@@ -77,12 +77,21 @@ sudo sed -i '$ a\extension=mongo.so' /etc/php5/apache2/php.ini
 # http://ndever.net/articles/linux/installing-sass-and-compass-ubuntu-1210-1304
 sudo apt-get install -y ruby-full rubygems
 
+# Node.js & Node Package Manager
+# ------------------------------------------------
+# http://stackoverflow.com/questions/16302436/install-nodejs-on-ubuntu-12-10
+sudo add-apt-repository -y ppa:chris-lea/node.js
+sudo apt-get update
+sudo apt-get install -y nodejs
 
-# SASS & Compass
+# SASS & Compass & Foundation SASS
 # ------------------------------------------------
 # http://ndever.net/articles/linux/installing-sass-and-compass-ubuntu-1210-1304
 sudo gem install sass
 sudo gem install compass
+
+sudo npm install -g bower grunt-cli
+sudo gem install foundation
 
 # MySQL
 # ------------------------------------------------
