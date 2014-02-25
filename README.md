@@ -23,6 +23,9 @@ Done
 * Ruby & Rubygems
 * SASS & Compass
 * MySQL
+* Node.js & npm
+* Bower
+* Grunt
 
 Todo
 ----
@@ -32,9 +35,6 @@ Todo
 * Test compass, mongo etc.
 
 * Sync database(s) ?
-
-* Node.js & npm ?
-** https://github.com/semmypurewal/node-dev-bootstrap
 
 * 64-bit Ubuntu & Mongo
 

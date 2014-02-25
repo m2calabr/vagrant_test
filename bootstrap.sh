@@ -91,7 +91,7 @@ sudo apt-get install -y nodejs
 sudo gem install sass
 sudo gem install compass
 
-sudo npm install -g bower grunt-cli
+sudo npm install -g bower grunt-cli --no-bin-links # https://github.com/semmypurewal/node-dev-bootstrap
 sudo gem install foundation
 
 
